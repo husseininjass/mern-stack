@@ -5,6 +5,7 @@ import route from "./routes/bookRoute.js";
 import cors from 'cors'
 const app = express();
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 
 dotenv.config({path: './config.env'});

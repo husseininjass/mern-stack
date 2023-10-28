@@ -6,7 +6,8 @@ router.post('/' , (req , res)=>{
         title : req.body.title,
         author : req.body.author,
         publishYear : req.body.publishYear,
-        price : req.body.price
+        price : req.body.price,
+        description : req.body.description
     }
     Book.create(newBook).then(book => res.status(201).send(book))
 })
