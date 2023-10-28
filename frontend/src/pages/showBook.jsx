@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Back from "../../components/backButton";
 import { useNavigate } from "react-router-dom";
-
+import './syle.css'
 function ShowBook() {
     const { id } = useParams();
     const [book, setBook] = useState({});
@@ -14,7 +14,6 @@ function ShowBook() {
           .get(`http://localhost:5000/books/${id}`)
           .then((response) => {
             setBook(response.data.data);
-            console.log(book);
           })
           .catch((error) => {
             console.error("Error fetching data:", error);
@@ -27,14 +26,33 @@ function ShowBook() {
 
     return (
         <>
-            <div className="text-center mt-4">
+            <div className="text-center mt-4 mb-28">
                 <Back onClick={backToHome}>Home Page</Back>
             </div>
-            <div className="text-lg font-semibold mt-2">{book.title}</div>
-            <div className="text-base mt-2">{book.author}</div>
-            <div className="text-base mt-2">{book.description}</div>
-            <div className="text-base mt-2">{book.publishYear}</div>
-            <div className="text-2xl text-red-600 mt-4">{book.price}</div>
+            <div className="library shadow-lg">
+                <div className="title p-4">
+                    <div className="book_name font-bold text-2xl">Book Name :</div>
+                    <div className="book_title text-2xl pl-4">{book.title}</div>
+                </div>
+                <div className="title p-4">
+                    <div className="book_name font-bold text-2xl">Book Author :</div>
+                    <div className="book_title text-2xl pl-4">{book.author}</div>
+                </div>
+                <div className="title p-4">
+                    <div className="book_name font-bold text-2xl">Book description :</div>
+                    <div className="book_title text-2xl pl-4">{book.description}</div>
+                </div>
+                <div className="title p-4">
+                    <div className="book_name font-bold text-2xl">Book publishYear :</div>
+                    <div className="book_title text-2xl pl-4">{book.publishYear}</div>
+                </div>
+                <div className="title p-4">
+                    <div className="book_name font-bold text-2xl">Book price :</div>
+                    <div className="book_title text-2xl pl-4">{book.price}</div>
+                </div>
+
+            </div>
+
         </>
     );
 }

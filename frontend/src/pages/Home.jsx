@@ -22,6 +22,7 @@ function Home() {
 
   return (
     <>
+    <h1 className="p-7 text-5xl text-gray-100	 text rounded	">BookLet</h1>
       <div className="p-4">
         <div className="flex justify-between items-center">
           <h1 className="text-3xl my-8 text-center dark:text-black-900">Book List</h1>
