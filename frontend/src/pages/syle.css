@@ -23,15 +23,26 @@ justify-content: center;
     width: 10rem;
 }
 .add_book input{
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 0.25rem;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 1em;
+    background-color: #ccc;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+    transition: 300ms ease-in-out;
+}
+.add_book input:focus{
+    background-color: white;
+  transform: scale(1.05);
+  box-shadow: 13px 13px 100px #969696,
+             -13px -13px 100px #ffffff;
 }
 .add .button{
     transform: translateX(5rem);
     background-color: gray;
     padding: 0.5rem;
     border-radius: 5px;
+    box-shadow: 3px 3px 4px black;
 }
 .add .button:hover{
     cursor: pointer;

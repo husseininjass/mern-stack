@@ -16,7 +16,7 @@ function createBook(){
         e.preventDefault();
         axios.post('http://localhost:5000/books' , input)
         .then(_=>{
-            navigate('/')
+            navigate('/');
         })
         
     }

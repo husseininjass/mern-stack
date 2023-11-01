@@ -67,11 +67,12 @@ function Home() {
                     <td className="px-6 py-4 text-center text-lg">
                       {book.price}
                     </td>
-                    <td className="px-6 py-4 text-center">
-                      <Link to={`/books/edit/${book._id}`} className="font-medium text-blue-600 dark:text-blue-500 hover:underline pl-4"><FaPen /></Link>
-                      <Link to={`/books/details/${book._id}`} className="font-medium text-blue-600 dark:text-blue-500 hover:underline pl-4"><FaExclamation className="h-5 w-5"/></Link>
-                      <Link to={`/books/delete/${book._id}`} className="font-medium text-blue-600 dark:text-blue-500 hover:underline pl-4"><FaDeleteLeft className="h-5 w-5"/></Link>
+                    <td className="px-6 py-4 text-center text-lg">
+                      <p className="text-center"><Link to={`/books/edit/${book._id}`} className="text-center text-blue-600 dark:text-blue-500 hover:underline"><FaPen /></Link></p>
+                      <Link to={`/books/details/${book._id}`} className="text-center font-medium text-blue-600 dark:text-blue-500 hover:underline pl-4"><FaExclamation className="h-5 w-5" /></Link>
+                      <Link to={`/books/delete/${book._id}`} className="text-center font-medium text-blue-600 dark:text-blue-500 hover:underline pl-4"><FaDeleteLeft className="h-5 w-5" /></Link>
                     </td>
+
                   </tr>
                 ))}
               </tbody>

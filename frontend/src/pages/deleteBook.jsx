@@ -14,10 +14,12 @@ function DeleteBook() {
                 console.error("Error deleting book:", error);
             });
     }
-
+    const click = ()=>{
+        navigate('/')
+    }
     return (
         <div className="p-4">
-            <backButton />
+            <Back onClick={click}> Home</Back>
             <h1 className="text-3xl my-4">Delete Book</h1>
            
             <div className="flex flex-col items-center border-2 border-sky-400 rounded-xl w-[600px] p-8 mx-auto">

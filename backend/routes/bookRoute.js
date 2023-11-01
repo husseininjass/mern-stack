@@ -20,11 +20,11 @@ router.get('/' ,(req , res)=>{
         })
     })
 })
-router.put('/:id' , (req , res)=>{
+router.put('/edit/:id' , (req , res)=>{
     const {id} = req.params;
     Book.findByIdAndUpdate(id , req.body)
     .then(book=>{
-        res.status(300).send(book)
+        res.status(200).send(book)
     })
 })
 router.delete('/:id' , (req , res)=>{
