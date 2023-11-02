@@ -26,29 +26,29 @@ function ShowBook() {
 
     return (
         <>
-            <div className="text-center mt-4 mb-28">
+            <div className="text-center mt-4 mb-16">
                 <Back onClick={backToHome}>Home Page</Back>
             </div>
             <div className="library shadow-lg">
                 <div className="title p-4">
-                    <div className="book_name font-bold text-2xl">Book Name :</div>
+                    <div className="book_name font-bold text-2xl">Book Name </div>
                     <div className="book_title text-2xl pl-4">{book.title}</div>
                 </div>
                 <div className="title p-4">
-                    <div className="book_name font-bold text-2xl">Book Author :</div>
+                    <div className="book_name font-bold text-2xl">Book Author </div>
                     <div className="book_title text-2xl pl-4">{book.author}</div>
                 </div>
                 <div className="title p-4">
-                    <div className="book_name font-bold text-2xl">Book description :</div>
-                    <div className="book_title text-2xl pl-4">{book.description}</div>
-                </div>
-                <div className="title p-4">
-                    <div className="book_name font-bold text-2xl">Book publishYear :</div>
+                    <div className="book_name font-bold text-2xl">Book publishYear </div>
                     <div className="book_title text-2xl pl-4">{book.publishYear}</div>
                 </div>
                 <div className="title p-4">
-                    <div className="book_name font-bold text-2xl">Book price :</div>
+                    <div className="book_name font-bold text-2xl">Book price </div>
                     <div className="book_title text-2xl pl-4">{book.price}</div>
+                </div>
+                <div className="title p-4">
+                    <div className="book_name font-bold text-2xl">Book description </div>
+                    <div className="book_title text-2xl pl-4">{book.description}</div>
                 </div>
 
             </div>

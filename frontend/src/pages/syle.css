@@ -1,11 +1,11 @@
 .library{
     text-align: center;
-    width: 40%;
-    transform: translateX(80%);
+    width: 60%;
+    transform: translateX(35%);
 
 }
 .title{
-display: flex;
+
 justify-content: center;
 }
 .add{
